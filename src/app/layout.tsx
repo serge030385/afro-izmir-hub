@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   },
   description: PRIMARY_SEO_DESCRIPTION,
   keywords: SEO_KEYWORDS,
+  verification: {
+  google: "WIrqaKW2rY7wxsPswnYgDUJWHIdLvSUr-diNSE9oxvU",
+},
   metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "/",
