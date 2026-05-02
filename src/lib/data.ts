@@ -7,8 +7,8 @@ export const SITE_CONFIG = {
     "Services, listings and deals for the African community in Turkey.",
     "Türkiye’deki Afrika topluluğu için hizmetler, ilanlar ve fırsatlar.",
   ),
-  whatsappNumber: "905317818795",
-  whatsappDisplay: "+90 531 781 87 95",
+  whatsappNumber: "+905317818795",
+  whatsappDisplay: "+905317818795",
   email: "contact@afroizmirhub.com",
   city: localized("Izmir, Turquie", "Izmir, Turkey", "İzmir, Türkiye"),
   socials: {
@@ -21,8 +21,8 @@ export const SITE_CONFIG = {
 export const FATOUSHOP_CONFIG = {
   name: "FatouShop",
   url: "https://fatoushop.vercel.app",
-  whatsappNumber: "905376781196",
-  whatsappUrl: "https://wa.me/905376781196",
+  whatsappNumber: "+905317818795",
+  whatsappUrl: "https://wa.me/905317818795",
   description: localized(
     "FatouShop est une boutique africaine et un restaurant/bar à Izmir. Commandez vos produits africains, réservez vos plats camerounais et profitez d’un espace convivial afro.",
     "FatouShop is an African shop and restaurant/bar in Izmir. Order African products, book Cameroonian dishes and enjoy a friendly Afro space in Izmir.",
