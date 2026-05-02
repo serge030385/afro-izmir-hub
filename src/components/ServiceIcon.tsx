@@ -8,6 +8,7 @@ import {
   Home,
   Scissors,
   ShoppingBag,
+  Stethoscope,
   Utensils,
 } from "lucide-react";
 import type { ComponentType } from "react";
@@ -24,6 +25,7 @@ const serviceIcons: Record<ServiceIconName, ComponentType<{ className?: string }
   car: Car,
   "file-text": FileText,
   briefcase: Briefcase,
+  stethoscope: Stethoscope,
 };
 
 export function ServiceIcon({ icon, className }: { icon: ServiceIconName; className?: string }) {

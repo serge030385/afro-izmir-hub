@@ -14,7 +14,10 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { Badge } from "@/components/Badge";
 import { announcements, professionals, services, SITE_CONFIG } from "@/lib/data";
 
-const popularServices = services.filter((service) => service.featured).slice(0, 3);
+const medicalService = services.find((service) => service.slug === "consultation-medicale-en-ligne");
+const popularServices = [medicalService, ...services.filter((service) => service.featured && service.slug !== "consultation-medicale-en-ligne")]
+  .filter((service): service is (typeof services)[number] => Boolean(service))
+  .slice(0, 3);
 const latestAnnouncements = announcements.slice(0, 3);
 const recommendedBusinesses = professionals
   .filter((professional) => ["Restaurants africains", "Boutiques africaines"].includes(professional.category))

@@ -5,12 +5,14 @@ import { ArrowRight, MessageCircle, ShoppingBag } from "lucide-react";
 import { Badge } from "@/components/Badge";
 import { FatouShopCard } from "@/components/FatouShopCard";
 import { useTranslation } from "@/components/LanguageProvider";
+import { MedicalConsultationCard } from "@/components/MedicalConsultationCard";
 import { SeoInternalLinks } from "@/components/SeoInternalLinks";
 import { FATOUSHOP_CONFIG } from "@/lib/data";
 import type { LocalSeoPage } from "@/lib/local-seo";
 
 export function LocalSeoPageContent({ page }: { page: LocalSeoPage }) {
   const { tx } = useTranslation();
+  const showMedicalConsultation = page.slug === "communaute-africaine-izmir";
 
   return (
     <>
@@ -64,6 +66,7 @@ export function LocalSeoPageContent({ page }: { page: LocalSeoPage }) {
             </article>
 
             <FatouShopCard className="mt-8" />
+            {showMedicalConsultation ? <MedicalConsultationCard className="mt-8" /> : null}
 
             <section className="mt-8 rounded-lg border border-black/10 bg-white p-5 shadow-sm sm:p-6">
               <h2 className="text-2xl font-black tracking-tight text-zinc-950">FAQ SEO locale</h2>

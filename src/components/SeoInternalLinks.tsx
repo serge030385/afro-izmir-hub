@@ -11,6 +11,13 @@ export function SeoInternalLinks({ className, currentSlug }: { className?: strin
       <p className="text-sm font-black uppercase tracking-[0.16em] text-emerald-800">Pages locales utiles</p>
       <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
         <Link
+          href="/consultation-medicale-en-ligne"
+          className="group inline-flex items-center justify-between gap-3 rounded-lg bg-emerald-50 px-4 py-3 text-sm font-black text-zinc-950 transition hover:bg-emerald-100"
+        >
+          Consultation médicale en ligne
+          <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
+        </Link>
+        <Link
           href="/"
           className="group inline-flex items-center justify-between gap-3 rounded-lg bg-amber-50 px-4 py-3 text-sm font-black text-zinc-950 transition hover:bg-amber-100"
         >

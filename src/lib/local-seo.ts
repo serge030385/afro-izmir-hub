@@ -266,7 +266,7 @@ export const localSeoPages: LocalSeoPage[] = [
       },
     ],
     faq: commonFaq,
-    relatedSlugs: ["fatoushop", "restaurant-africain-izmir", "produits-africains-izmir", "boutique-africaine-izmir"],
+    relatedSlugs: ["fatoushop", "consultation-medicale-en-ligne", "restaurant-africain-izmir", "produits-africains-izmir", "boutique-africaine-izmir"],
     keywords: ["cuisine camerounaise Izmir", "plats camerounais Izmir", "restaurant camerounais Izmir", "FatouShop"],
   },
   {

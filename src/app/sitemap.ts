@@ -32,10 +32,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: page.slug === "fatoushop" ? 0.95 : 0.9,
     })),
     ...services.map((service) => ({
-      url: `${SITE_URL}/services/${service.slug}`,
+      url: `${SITE_URL}${service.href ?? `/services/${service.slug}`}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
-      priority: ["restaurants-africains", "boutiques-africaines"].includes(service.slug) ? 0.85 : 0.65,
+      priority: ["restaurants-africains", "boutiques-africaines", "consultation-medicale-en-ligne"].includes(service.slug) ? 0.85 : 0.65,
     })),
     ...blogPosts.map((post) => ({
       url: `${SITE_URL}/infos-utiles/${post.slug}`,

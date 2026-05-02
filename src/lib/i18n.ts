@@ -20,6 +20,7 @@ export const translations = {
   fr: {
     navHome: "Accueil",
     navServices: "Services",
+    navMedical: "Santé",
     navDirectory: "Annuaire",
     navAnnouncements: "Annonces",
     navDeals: "Bons plans",
@@ -29,6 +30,7 @@ export const translations = {
     publish: "Publier",
     publishAd: "Publier une annonce",
     seeServices: "Voir les services",
+    bookConsultation: "Réserver une consultation",
     seeDetails: "Voir les détails",
     read: "Lire",
     popular: "Populaire",
@@ -172,6 +174,7 @@ export const translations = {
   en: {
     navHome: "Home",
     navServices: "Services",
+    navMedical: "Health",
     navDirectory: "Directory",
     navAnnouncements: "Listings",
     navDeals: "Deals",
@@ -181,6 +184,7 @@ export const translations = {
     publish: "Publish",
     publishAd: "Post a listing",
     seeServices: "View services",
+    bookConsultation: "Book a consultation",
     seeDetails: "View details",
     read: "Read",
     popular: "Popular",
@@ -322,6 +326,7 @@ export const translations = {
   tr: {
     navHome: "Ana sayfa",
     navServices: "Hizmetler",
+    navMedical: "Sağlık",
     navDirectory: "Rehber",
     navAnnouncements: "İlanlar",
     navDeals: "Fırsatlar",
@@ -331,6 +336,7 @@ export const translations = {
     publish: "Yayınla",
     publishAd: "İlan yayınla",
     seeServices: "Hizmetleri gör",
+    bookConsultation: "Konsültasyon ayır",
     seeDetails: "Detayları gör",
     read: "Oku",
     popular: "Popüler",

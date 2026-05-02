@@ -10,10 +10,11 @@ import type { ServiceItem } from "@/lib/data";
 
 export function ServiceCard({ service }: { service: ServiceItem }) {
   const { t, tx } = useTranslation();
+  const href = service.href ?? `/services/${service.slug}`;
 
   return (
     <Link
-      href={`/services/${service.slug}`}
+      href={href}
       className="group relative block min-h-[390px] overflow-hidden rounded-lg border border-white/10 bg-[#0b0b08] p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2"
       aria-label={`${t("seeDetails")} ${tx(service.title)}`}
     >
