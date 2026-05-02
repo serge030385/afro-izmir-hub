@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Afro Izmir Hub
 
-## Getting Started
+Site Next.js, TypeScript et Tailwind CSS pour une plateforme communautaire africaine a Izmir et en Turquie.
 
-First, run the development server:
+## Lancer en local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir ensuite l'URL affichee par Next.js, par exemple `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Modifier les contenus
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Les donnees mockees sont centralisees dans :
 
-## Learn More
+```text
+src/lib/data.ts
+```
 
-To learn more about Next.js, take a look at the following resources:
+Vous pouvez y modifier :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- le numero WhatsApp principal : `SITE_CONFIG.whatsappNumber`
+- l'email et les reseaux sociaux
+- les services
+- les professionnels de l'annuaire
+- les annonces
+- les bons plans
+- les articles du blog
+- les prix des offres de partenariat
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Pages incluses
 
-## Deploy on Vercel
+- Accueil
+- Services
+- Annuaire
+- Annonces
+- Publier une annonce
+- Bons plans
+- Infos utiles
+- Contact
+- Partenariat
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts utiles
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run lint
+npm run build
+```
