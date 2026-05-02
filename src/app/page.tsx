@@ -9,6 +9,7 @@ import { useTranslation } from "@/components/LanguageProvider";
 import { ProfessionalCard } from "@/components/ProfessionalCard";
 import { PricingPlans } from "@/components/PricingPlans";
 import { SectionHeader } from "@/components/SectionHeader";
+import { SeoInternalLinks } from "@/components/SeoInternalLinks";
 import { ServiceCard } from "@/components/ServiceCard";
 import { Badge } from "@/components/Badge";
 import { announcements, professionals, services, SITE_CONFIG } from "@/lib/data";
@@ -27,7 +28,7 @@ export default function Home() {
       <section className="relative isolate overflow-hidden bg-[#0b0b08] text-white">
         <Image
           src="/images/afro-izmir-hero.png"
-          alt="Communauté africaine près du front de mer a Izmir"
+          alt="Communauté africaine à Izmir avec services, restaurants africains et FatouShop"
           fill
           priority
           className="object-cover object-center"
@@ -95,6 +96,7 @@ export default function Home() {
       <section className="bg-white px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <FatouShopCard />
+          <SeoInternalLinks className="mt-8" />
         </div>
       </section>
 

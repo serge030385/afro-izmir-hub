@@ -2,41 +2,58 @@ import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { JsonLd } from "@/components/JsonLd";
 import { LanguageProvider } from "@/components/LanguageProvider";
+import {
+  absoluteUrl,
+  localBusinessJsonLd,
+  organizationJsonLd,
+  PRIMARY_SEO_DESCRIPTION,
+  PRIMARY_SEO_TITLE,
+  restaurantJsonLd,
+  SEO_KEYWORDS,
+  SITE_URL,
+  websiteJsonLd,
+} from "@/lib/seo";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Afro Izmir Hub | Services africains a Izmir",
+    default: PRIMARY_SEO_TITLE,
     template: "%s | Afro Izmir Hub",
   },
-  description:
-    "Plateforme francophone pour trouver services, annonces, professionnels, bons plans et partenaires africains a Izmir et en Turquie.",
-  keywords: [
-    "Afro Izmir Hub",
-    "FatouShop",
-    "boutique africaine Izmir",
-    "produits africains Izmir",
-    "restaurant camerounais Izmir",
-    "cuisine camerounaise Izmir",
-    "nourriture africaine Turquie",
-    "plats camerounais Izmir",
-    "Africains Izmir",
-    "services africains Turquie",
-    "annonces Izmir",
-    "restaurants africains",
-  ],
-  metadataBase: new URL("https://afroizmirhub.com"),
+  description: PRIMARY_SEO_DESCRIPTION,
+  keywords: SEO_KEYWORDS,
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Afro Izmir Hub",
-    description: "Tout pour la communaute africaine a Izmir : services, annonces, partenaires et bons plans.",
+    title: PRIMARY_SEO_TITLE,
+    description: PRIMARY_SEO_DESCRIPTION,
+    url: absoluteUrl("/"),
+    siteName: "Afro Izmir Hub",
     type: "website",
     locale: "fr_FR",
+    images: [
+      {
+        url: "/icon.png",
+        width: 512,
+        height: 512,
+        alt: "Afro Izmir Hub - restaurant africain et produits africains à Izmir",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: PRIMARY_SEO_TITLE,
+    description: PRIMARY_SEO_DESCRIPTION,
+    images: ["/icon.png"],
   },
 };
 
@@ -48,6 +65,10 @@ export default function RootLayout({
   return (
     <html lang="fr" className="h-full antialiased">
       <body className="flex min-h-full flex-col">
+        <JsonLd data={organizationJsonLd} />
+        <JsonLd data={websiteJsonLd} />
+        <JsonLd data={localBusinessJsonLd} />
+        <JsonLd data={restaurantJsonLd} />
         <LanguageProvider>
           <Header />
           <main className="flex-1">{children}</main>

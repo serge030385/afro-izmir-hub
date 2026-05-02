@@ -24,7 +24,7 @@ export const FATOUSHOP_CONFIG = {
   whatsappNumber: "905376781196",
   whatsappUrl: "https://wa.me/905376781196",
   description: localized(
-    "FatouShop est une boutique africaine et un restaurant/bar à Izmir. Commandez vos produits africains, réservez vos plats camerounais et profitez d’un espace convivial afro à Izmir.",
+    "FatouShop est une boutique africaine et un restaurant/bar à Izmir. Commandez vos produits africains, réservez vos plats camerounais et profitez d’un espace convivial afro.",
     "FatouShop is an African shop and restaurant/bar in Izmir. Order African products, book Cameroonian dishes and enjoy a friendly Afro space in Izmir.",
     "FatouShop, İzmir’de Afrika ürünleri satan bir mağaza ve restoran/bardır. Afrika ürünlerinizi sipariş edin, Kamerun yemeklerinizi rezerve edin ve İzmir’de samimi bir Afro mekandan yararlanın.",
   ),
