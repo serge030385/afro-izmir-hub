@@ -50,7 +50,7 @@ export function ContactAside() {
             target="_blank"
             rel="noreferrer"
             className="grid h-11 w-11 place-items-center rounded-lg border border-black/10 text-zinc-800 transition hover:bg-amber-50"
-            aria-label="Facebook"
+            aria-label="Facebook Afro Izmir Hub"
           >
             <Users className="h-5 w-5" aria-hidden="true" />
           </a>

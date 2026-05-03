@@ -9,11 +9,11 @@ export const SITE_CONFIG = {
   ),
   whatsappNumber: "+905317818795",
   whatsappDisplay: "+905317818795",
-  email: "contact@afroizmirhub.com",
+  email: "contact@afro-izmir-hub.com",
   city: localized("Izmir, Turquie", "Izmir, Turkey", "İzmir, Türkiye"),
   socials: {
     instagram: "https://instagram.com/afroizmirhub",
-    facebook: "https://facebook.com/afroizmirhub",
+    facebook: "https://www.facebook.com/afro.izmir.hub/",
     tiktok: "https://tiktok.com/@afroizmirhub",
   },
 };
