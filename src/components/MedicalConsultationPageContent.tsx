@@ -218,7 +218,7 @@ export function MedicalConsultationPageContent() {
               </label>
               <label className="grid gap-2 text-sm font-bold text-zinc-900">
                 Téléphone WhatsApp
-                <input required type="tel" value={form.phone} onChange={(event) => updateField("phone", event.target.value)} placeholder="+905317818795" className="min-h-12 rounded-lg border border-black/10 bg-zinc-50 px-3 text-sm font-semibold outline-none transition focus:border-emerald-700 focus:bg-white" />
+                <input required type="tel" value={form.phone} onChange={(event) => updateField("phone", event.target.value)} placeholder="+905376781196" className="min-h-12 rounded-lg border border-black/10 bg-zinc-50 px-3 text-sm font-semibold outline-none transition focus:border-emerald-700 focus:bg-white" />
               </label>
               <label className="grid gap-2 text-sm font-bold text-zinc-900">
                 Langue souhaitée

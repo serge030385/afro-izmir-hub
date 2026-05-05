@@ -8,12 +8,14 @@ import { FatouShopCard } from "@/components/FatouShopCard";
 import { useTranslation } from "@/components/LanguageProvider";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
-import { SITE_CONFIG, type ServiceItem } from "@/lib/data";
+import { FATOUSHOP_CONFIG, SITE_CONFIG, type ServiceItem } from "@/lib/data";
 
 export function ServiceDetailContent({ service }: { service: ServiceItem }) {
   const { t, tx } = useTranslation();
   const serviceTitle = tx(service.title);
   const showFatouShop = ["restaurants-africains", "boutiques-africaines", "evenements"].includes(service.slug);
+  const usesFoodWhatsApp = ["restaurants-africains", "boutiques-africaines"].includes(service.slug);
+  const serviceWhatsAppPhone = usesFoodWhatsApp ? FATOUSHOP_CONFIG.whatsappNumber : SITE_CONFIG.whatsappNumber;
   const partnerMessages = {
     add: {
       fr: `Bonjour ${SITE_CONFIG.name}, je souhaite ajouter mon contact dans la catégorie ${serviceTitle}.`,
@@ -55,7 +57,7 @@ export function ServiceDetailContent({ service }: { service: ServiceItem }) {
             <div className="rounded-lg border border-white/15 bg-white/10 p-5 backdrop-blur">
               <Badge variant="gold">{t("quickRecommendation")}</Badge>
               <p className="mt-4 text-sm leading-6 text-zinc-200">{t("quickRecommendationDescription")}</p>
-              <WhatsAppLink message={service.whatsappMessage} variant="light" className="mt-5 w-full">
+              <WhatsAppLink phone={serviceWhatsAppPhone} message={service.whatsappMessage} variant="light" className="mt-5 w-full">
                 {t("askRecommendation")}
               </WhatsAppLink>
             </div>
@@ -165,13 +167,13 @@ export function ServiceDetailContent({ service }: { service: ServiceItem }) {
             <p className="mt-4 text-sm leading-6 text-zinc-300">{t("serviceCtaDescription")}</p>
           </div>
           <div className="mt-8 grid gap-3 md:grid-cols-3">
-            <WhatsAppLink message={partnerMessages.add} variant="light" className="w-full">
+            <WhatsAppLink phone={serviceWhatsAppPhone} message={partnerMessages.add} variant="light" className="w-full">
               {t("addMyContact")}
             </WhatsAppLink>
-            <WhatsAppLink message={partnerMessages.premium} className="w-full">
+            <WhatsAppLink phone={serviceWhatsAppPhone} message={partnerMessages.premium} className="w-full">
               {t("becomePremium")}
             </WhatsAppLink>
-            <WhatsAppLink message={partnerMessages.sponsor} className="w-full bg-red-950 hover:bg-red-900">
+            <WhatsAppLink phone={serviceWhatsAppPhone} message={partnerMessages.sponsor} className="w-full bg-red-950 hover:bg-red-900">
               {t("sponsorService")}
             </WhatsAppLink>
           </div>

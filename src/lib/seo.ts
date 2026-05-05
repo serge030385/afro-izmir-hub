@@ -66,7 +66,7 @@ export const localBusinessJsonLd = {
   "@type": "LocalBusiness",
   name: SITE_CONFIG.name,
   url: SITE_URL,
-  telephone: "+905317818795",
+  telephone: SITE_CONFIG.whatsappNumber,
   areaServed: "Izmir, Turquie",
   address: {
     "@type": "PostalAddress",
@@ -82,7 +82,7 @@ export const restaurantJsonLd = {
   "@type": "Restaurant",
   name: "FatouShop",
   url: FATOUSHOP_CONFIG.url,
-  telephone: "+905317818795",
+  telephone: FATOUSHOP_CONFIG.whatsappNumber,
   servesCuisine: ["Cuisine africaine", "Cuisine camerounaise"],
   address: {
     "@type": "PostalAddress",

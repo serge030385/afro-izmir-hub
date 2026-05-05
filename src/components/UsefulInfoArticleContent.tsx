@@ -6,7 +6,7 @@ import { Badge } from "@/components/Badge";
 import { FatouShopCard } from "@/components/FatouShopCard";
 import { useTranslation } from "@/components/LanguageProvider";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
-import type { BlogPost, ServiceItem } from "@/lib/data";
+import { FATOUSHOP_CONFIG, type BlogPost, type ServiceItem } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
 
 type UsefulInfoArticleContentProps = {
@@ -18,6 +18,7 @@ type UsefulInfoArticleContentProps = {
 export function UsefulInfoArticleContent({ post, relatedServices, relatedArticles }: UsefulInfoArticleContentProps) {
   const { language, t, tx } = useTranslation();
   const showFatouShop = ["produits-africains-izmir", "restaurants-africains-izmir"].includes(post.slug);
+  const ctaPhone = showFatouShop ? FATOUSHOP_CONFIG.whatsappNumber : undefined;
 
   return (
     <>
@@ -121,7 +122,7 @@ export function UsefulInfoArticleContent({ post, relatedServices, relatedArticle
                 <h2 className="mt-4 text-2xl font-black tracking-tight">{t("usefulContact")}</h2>
                 <p className="mt-3 text-sm leading-6 text-zinc-300">{t("usefulContactDescription")}</p>
               </div>
-              <WhatsAppLink message={post.ctaWhatsappMessage} variant="light" className="mt-6 w-full sm:w-auto">
+              <WhatsAppLink phone={ctaPhone} message={post.ctaWhatsappMessage} variant="light" className="mt-6 w-full sm:w-auto">
                 {post.ctaLabel ? tx(post.ctaLabel) : t("askRecommendation")}
               </WhatsAppLink>
             </section>

@@ -7,8 +7,8 @@ export const SITE_CONFIG = {
     "Services, listings and deals for the African community in Turkey.",
     "Türkiye’deki Afrika topluluğu için hizmetler, ilanlar ve fırsatlar.",
   ),
-  whatsappNumber: "+905317818795",
-  whatsappDisplay: "+905317818795",
+  whatsappNumber: "+905376781196",
+  whatsappDisplay: "+905376781196",
   email: "contact@afro-izmir-hub.com",
   city: localized("Izmir, Turquie", "Izmir, Turkey", "İzmir, Türkiye"),
   socials: {
@@ -174,7 +174,7 @@ export const services: ServiceItem[] = [
           "Recommended African restaurant for African dishes, Afro atmosphere, orders and events.",
           "Afrika yemekleri, afro atmosfer, siparişler ve etkinlikler için önerilen Afrika restoranı.",
         ),
-        whatsapp: phone,
+        whatsapp: FATOUSHOP_CONFIG.whatsappNumber,
         isPremium: true,
       },
       {
@@ -185,7 +185,7 @@ export const services: ServiceItem[] = [
           "Senegalese, Ivorian and Cameroonian dishes by order, delivery possible.",
           "Senegal, Fildişi Sahili ve Kamerun yemekleri siparişle, teslimat mümkün.",
         ),
-        whatsapp: phone,
+        whatsapp: FATOUSHOP_CONFIG.whatsappNumber,
       },
     ],
     faq: [
@@ -256,7 +256,7 @@ export const services: ServiceItem[] = [
           "African products, spices, food, fresh and dry goods depending on availability.",
           "Stok durumuna göre Afrika ürünleri, baharatlar, gıda, taze ve kuru ürünler.",
         ),
-        whatsapp: phone,
+        whatsapp: FATOUSHOP_CONFIG.whatsappNumber,
         isPremium: true,
       },
     ],
@@ -580,7 +580,7 @@ export const professionals: Professional[] = [
       "Afrika yemekleri, afro atmosfer, siparişler ve etkinlikler için önerilen restoran.",
     ),
     city: localized("Izmir", "Izmir", "İzmir"),
-    whatsapp: phone,
+    whatsapp: FATOUSHOP_CONFIG.whatsappNumber,
     badge: "Premium",
   },
   {
@@ -593,7 +593,7 @@ export const professionals: Professional[] = [
       "Stok durumuna göre Afrika ürünleri, baharatlar, gıda, taze ve kuru ürünler.",
     ),
     city: localized("Izmir", "Izmir", "İzmir"),
-    whatsapp: phone,
+    whatsapp: FATOUSHOP_CONFIG.whatsappNumber,
     badge: "Premium",
   },
   {
