@@ -2,27 +2,19 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/components/JsonLd";
 import { MedicalConsultationPageContent } from "@/components/MedicalConsultationPageContent";
 import { SITE_CONFIG } from "@/lib/data";
+import { medicalContent } from "@/lib/i18n";
 import { absoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Consultation médicale en ligne à Izmir | Médecin agréé | Afro Izmir Hub",
-  description:
-    "Réservez une consultation médicale en ligne avec un médecin agréé depuis Izmir ou ailleurs en Turquie. Service disponible en français, anglais ou turc selon disponibilité.",
-  keywords: [
-    "consultation médicale en ligne Izmir",
-    "médecin en ligne Turquie",
-    "médecin francophone Izmir",
-    "consultation santé Turquie",
-    "médecin agréé Turquie",
-    "Afro Izmir Hub médical",
-  ],
+  title: medicalContent.seoTitle.fr,
+  description: medicalContent.seoDescription.fr,
+  keywords: medicalContent.seoKeywords.map((keyword) => keyword.fr),
   alternates: {
     canonical: "/consultation-medicale-en-ligne",
   },
   openGraph: {
-    title: "Consultation médicale en ligne à Izmir | Médecin agréé | Afro Izmir Hub",
-    description:
-      "Réservez une consultation médicale en ligne avec un médecin agréé depuis Izmir ou ailleurs en Turquie. Service disponible en français, anglais ou turc selon disponibilité.",
+    title: medicalContent.seoTitle.fr,
+    description: medicalContent.seoDescription.fr,
     url: absoluteUrl("/consultation-medicale-en-ligne"),
     siteName: "Afro Izmir Hub",
     type: "website",
@@ -30,9 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Consultation médicale en ligne à Izmir | Médecin agréé | Afro Izmir Hub",
-    description:
-      "Réservez une consultation médicale en ligne avec un médecin agréé depuis Izmir ou ailleurs en Turquie. Service disponible en français, anglais ou turc selon disponibilité.",
+    title: medicalContent.seoTitle.fr,
+    description: medicalContent.seoDescription.fr,
   },
 };
 
@@ -50,7 +41,7 @@ export default function OnlineMedicalConsultationPage() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Consultation médicale en ligne",
+        name: medicalContent.title.fr,
         item: absoluteUrl("/consultation-medicale-en-ligne"),
       },
     ],
@@ -59,7 +50,7 @@ export default function OnlineMedicalConsultationPage() {
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
-    name: "Consultation médicale en ligne - Afro Izmir Hub",
+    name: medicalContent.jsonLdServiceName.fr,
     url: absoluteUrl("/consultation-medicale-en-ligne"),
     telephone: SITE_CONFIG.whatsappNumber,
     areaServed: "Izmir, Turquie",

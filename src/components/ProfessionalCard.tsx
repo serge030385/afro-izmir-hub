@@ -8,17 +8,18 @@ import { categoryLabels, type Professional } from "@/lib/data";
 
 export function ProfessionalCard({ professional }: { professional: Professional }) {
   const { t, tx } = useTranslation();
+  const professionalName = typeof professional.name === "string" ? professional.name : tx(professional.name);
   const message = {
-    fr: `Bonjour ${professional.name}, je viens depuis Afro Izmir Hub et je souhaite vous contacter.`,
-    en: `Hello ${professional.name}, I come from Afro Izmir Hub and would like to contact you.`,
-    tr: `Merhaba ${professional.name}, Afro Izmir Hub’dan geliyorum ve sizinle iletişime geçmek istiyorum.`,
+    fr: `Bonjour ${professionalName}, je viens depuis Afro Izmir Hub et je souhaite vous contacter.`,
+    en: `Hello ${professionalName}, I come from Afro Izmir Hub and would like to contact you.`,
+    tr: `Merhaba ${professionalName}, Afro Izmir Hub’dan geliyorum ve sizinle iletişime geçmek istiyorum.`,
   };
 
   return (
     <article className="rounded-lg border border-black/10 bg-white p-5 shadow-sm">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h3 className="text-lg font-black tracking-tight text-zinc-950">{professional.name}</h3>
+          <h3 className="text-lg font-black tracking-tight text-zinc-950">{professionalName}</h3>
           <p className="mt-1 text-sm font-semibold text-emerald-800">{tx(categoryLabels[professional.category])}</p>
         </div>
         {professional.badge ? (

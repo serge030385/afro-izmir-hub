@@ -336,7 +336,7 @@ export const translations = {
     publish: "Yayınla",
     publishAd: "İlan yayınla",
     seeServices: "Hizmetleri gör",
-    bookConsultation: "Konsültasyon ayır",
+    bookConsultation: "Danışmanlık randevusu al",
     seeDetails: "Detayları gör",
     read: "Oku",
     popular: "Popüler",
@@ -475,6 +475,271 @@ export const translations = {
     closeMenu: "Menüyü kapat",
     openMenu: "Menüyü aç",
   },
+} as const;
+
+export const medicalContent = {
+  heroBadge: localized(
+    "Médecin agréé • En ligne • Turquie",
+    "Licensed doctor • Online • Turkey",
+    "Lisanslı doktor • Online • Türkiye",
+  ),
+  title: localized(
+    "Consultation médicale en ligne",
+    "Online medical consultation",
+    "Online tıbbi danışmanlık",
+  ),
+  cardTitle: localized(
+    "Consultation médicale en ligne",
+    "Online medical consultation",
+    "Online tıbbi danışmanlık",
+  ),
+  cardDescription: localized(
+    "Besoin d’un avis médical ? Réservez une consultation en ligne avec un médecin agréé.",
+    "Need medical guidance? Book an online consultation with a licensed doctor.",
+    "Tıbbi görüşe mi ihtiyacınız var? Lisanslı bir doktorla online danışmanlık randevusu alın.",
+  ),
+  subtitle: localized(
+    "Parlez à un médecin agréé depuis Izmir ou ailleurs en Turquie.",
+    "Speak with a licensed doctor from Izmir or anywhere in Turkey.",
+    "İzmir’den veya Türkiye’nin herhangi bir yerinden lisanslı bir doktorla görüşün.",
+  ),
+  primaryCta: localized(
+    "Réserver une consultation",
+    "Book a consultation",
+    "Danışmanlık randevusu al",
+  ),
+  secondaryCta: localized(
+    "Contacter via WhatsApp",
+    "Contact on WhatsApp",
+    "WhatsApp üzerinden iletişime geç",
+  ),
+  panelTitle: localized(
+    "Orientation médicale professionnelle",
+    "Professional medical guidance",
+    "Profesyonel tıbbi yönlendirme",
+  ),
+  serviceText: localized(
+    "Afro Izmir Hub propose un service de consultation médicale en ligne avec un médecin agréé. Ce service permet aux personnes vivant à Izmir ou ailleurs en Turquie d’obtenir une orientation médicale professionnelle, en français, anglais ou turc selon disponibilité.",
+    "Afro Izmir Hub offers online medical consultations with a licensed doctor. This service helps people living in Izmir or elsewhere in Turkey receive professional medical guidance in French, English or Turkish depending on availability.",
+    "Afro Izmir Hub, lisanslı bir doktorla online tıbbi danışmanlık hizmeti sunar. Bu hizmet, İzmir’de veya Türkiye’nin başka bir şehrinde yaşayan kişilerin, müsaitliğe göre Fransızca, İngilizce veya Türkçe profesyonel tıbbi yönlendirme almasına yardımcı olur.",
+  ),
+  emergencyText: localized(
+    "Ce service ne remplace pas les urgences médicales. En cas d’urgence, douleur intense, difficulté à respirer, perte de connaissance, accident grave ou situation critique, appelez immédiatement le 112 en Turquie.",
+    "This service does not replace emergency medical care. In case of emergency, severe pain, difficulty breathing, loss of consciousness, serious accident or critical situation, call 112 immediately in Turkey.",
+    "Bu hizmet acil tıbbi bakımın yerine geçmez. Acil durumda, şiddetli ağrı, nefes alma zorluğu, bilinç kaybı, ciddi kaza veya kritik bir durum varsa Türkiye’de hemen 112’yi arayın.",
+  ),
+  servicesEyebrow: localized("Services proposés", "Services offered", "Sunulan hizmetler"),
+  servicesTitle: localized(
+    "Une aide claire avant, pendant ou après un rendez-vous",
+    "Clear support before, during or after an appointment",
+    "Randevu öncesinde, sırasında veya sonrasında net destek",
+  ),
+  offeredServices: [
+    localized("Médecine générale", "General medicine", "Genel tıp"),
+    localized("Conseil santé", "Health advice", "Sağlık danışmanlığı"),
+    localized("Avis médical initial", "Initial medical opinion", "İlk tıbbi görüş"),
+    localized("Suivi simple", "Simple follow-up", "Basit takip"),
+    localized("Orientation vers spécialiste", "Referral to a specialist", "Uzman doktora yönlendirme"),
+    localized("Explication de résultats médicaux simples", "Explanation of simple medical results", "Basit tıbbi sonuçların açıklanması"),
+    localized("Aide à comprendre le système médical en Turquie", "Help understanding the medical system in Turkey", "Türkiye’deki sağlık sistemini anlamaya yardım"),
+    localized("Préparation à une visite médicale", "Preparation for a medical visit", "Tıbbi muayeneye hazırlık"),
+  ],
+  benefits: [
+    localized("Parler à un médecin agréé à distance", "Speak remotely with a licensed doctor", "Lisanslı bir doktorla uzaktan görüşün"),
+    localized("Obtenir une orientation médicale professionnelle", "Get professional medical guidance", "Profesyonel tıbbi yönlendirme alın"),
+    localized("Préparer une visite médicale en Turquie", "Prepare for a medical visit in Turkey", "Türkiye’de tıbbi ziyaret için hazırlanın"),
+    localized("Comprendre les prochaines étapes possibles", "Understand possible next steps", "Olası sonraki adımları anlayın"),
+  ],
+  practicalInfo: [
+    localized("Ce service ne remplace pas les urgences médicales", "This service does not replace medical emergencies", "Bu hizmet acil tıbbi durumların yerini tutmaz"),
+    localized("Préparez vos symptômes, questions et documents utiles", "Prepare your symptoms, questions and useful documents", "Belirtilerinizi, sorularınızı ve gerekli belgeleri hazırlayın"),
+    localized("Les langues disponibles dépendent de la disponibilité du médecin", "Available languages depend on the doctor’s availability", "Mevcut diller doktorun uygunluğuna bağlıdır"),
+  ],
+  workflowEyebrow: localized("Fonctionnement", "How it works", "Nasıl çalışır"),
+  workflowTitle: localized(
+    "Réserver en quelques étapes",
+    "Book in a few steps",
+    "Birkaç adımda randevu alın",
+  ),
+  steps: [
+    localized("Envoyez un message WhatsApp", "Send a WhatsApp message", "WhatsApp mesajı gönderin"),
+    localized("Expliquez brièvement votre besoin", "Briefly explain your need", "İhtiyacınızı kısaca açıklayın"),
+    localized("Choisissez un créneau disponible", "Choose an available time slot", "Uygun bir saat seçin"),
+    localized("Consultez en ligne avec un médecin agréé", "Consult online with a licensed doctor", "Lisanslı bir doktorla online görüşün"),
+    localized("Recevez des recommandations et les prochaines étapes", "Receive recommendations and next steps", "Önerileri ve sonraki adımları alın"),
+  ],
+  languagesTitle: localized("Langues disponibles", "Available languages", "Mevcut diller"),
+  languagesList: localized(
+    "Français • Anglais • Turc",
+    "French • English • Turkish",
+    "Fransızca • İngilizce • Türkçe",
+  ),
+  languageOptions: {
+    fr: localized("Français", "French", "Fransızca"),
+    en: localized("Anglais", "English", "İngilizce"),
+    tr: localized("Turc", "Turkish", "Türkçe"),
+  },
+  formEyebrow: localized("Formulaire de réservation", "Booking form", "Randevu formu"),
+  formTitle: localized(
+    "Envoyer la demande sur WhatsApp",
+    "Send the request on WhatsApp",
+    "Talebi WhatsApp üzerinden gönder",
+  ),
+  formLabels: {
+    name: localized("Nom", "Name", "Ad"),
+    phone: localized("Téléphone WhatsApp", "WhatsApp phone", "WhatsApp telefonu"),
+    language: localized("Langue souhaitée", "Preferred language", "Tercih edilen dil"),
+    reason: localized("Motif de consultation", "Reason for consultation", "Danışmanlık nedeni"),
+    slot: localized("Créneau souhaité", "Preferred time slot", "Tercih edilen zaman"),
+    message: localized("Message complémentaire", "Additional message", "Ek mesaj"),
+  },
+  formPlaceholders: {
+    slot: localized("Ex : demain après-midi", "Ex: tomorrow afternoon", "Örn: yarın öğleden sonra"),
+    reason: localized("Décrivez brièvement le besoin", "Briefly describe the need", "İhtiyacınızı kısaca açıklayın"),
+  },
+  pricingEyebrow: localized("Tarifs", "Pricing", "Ücretler"),
+  pricingTitle: localized(
+    "Prix faciles à modifier",
+    "Easy-to-edit prices",
+    "Kolayca değiştirilebilir fiyatlar",
+  ),
+  pricingNote: localized(
+    "Les tarifs peuvent varier selon le type de consultation, la durée et la disponibilité du médecin.",
+    "Prices may vary depending on the type of consultation, duration and doctor availability.",
+    "Ücretler danışmanlık türüne, süreye ve doktorun müsaitliğine göre değişebilir.",
+  ),
+  prices: [
+    {
+      title: localized("Consultation courte", "Short consultation", "Kısa danışmanlık"),
+      price: localized("Prix à définir", "Price to be defined", "Fiyat belirlenecek"),
+    },
+    {
+      title: localized("Consultation standard", "Standard consultation", "Standart danışmanlık"),
+      price: localized("Prix à définir", "Price to be defined", "Fiyat belirlenecek"),
+    },
+    {
+      title: localized("Accompagnement médical", "Medical support", "Tıbbi destek"),
+      price: localized("Prix à définir", "Price to be defined", "Fiyat belirlenecek"),
+    },
+  ],
+  faq: [
+    {
+      question: localized("Qui réalise la consultation ?", "Who provides the consultation?", "Danışmanlığı kim yapar?"),
+      answer: localized(
+        "La consultation est réalisée par un médecin agréé, selon les disponibilités confirmées lors de la réservation.",
+        "The consultation is provided by a licensed doctor, depending on availability confirmed during booking.",
+        "Danışmanlık, randevu sırasında teyit edilen müsaitliğe göre lisanslı bir doktor tarafından yapılır.",
+      ),
+    },
+    {
+      question: localized("Est-ce un vrai médecin ?", "Is it a real doctor?", "Bu gerçek bir doktor mu?"),
+      answer: localized(
+        "Oui, le service est prévu pour vous orienter avec un médecin agréé. Les détails pratiques sont confirmés avant le rendez-vous.",
+        "Yes, the service is designed to guide you with a licensed doctor. Practical details are confirmed before the appointment.",
+        "Evet, hizmet lisanslı bir doktorla yönlendirme almak için tasarlanmıştır. Pratik detaylar randevudan önce teyit edilir.",
+      ),
+    },
+    {
+      question: localized("Est-ce disponible en français ?", "Is it available in French?", "Fransızca mevcut mu?"),
+      answer: localized(
+        "Le service peut être disponible en français, anglais ou turc selon la disponibilité du médecin.",
+        "The service may be available in French, English or Turkish depending on doctor availability.",
+        "Hizmet, doktorun müsaitliğine göre Fransızca, İngilizce veya Türkçe sunulabilir.",
+      ),
+    },
+    {
+      question: localized(
+        "Puis-je consulter depuis une autre ville en Turquie ?",
+        "Can I consult from another city in Turkey?",
+        "Türkiye’de başka bir şehirden danışmanlık alabilir miyim?",
+      ),
+      answer: localized(
+        "Oui, la consultation se fait en ligne et peut être demandée depuis Izmir ou ailleurs en Turquie.",
+        "Yes, the consultation is online and can be requested from Izmir or anywhere else in Turkey.",
+        "Evet, danışmanlık online yapılır ve İzmir’den veya Türkiye’nin başka bir yerinden talep edilebilir.",
+      ),
+    },
+    {
+      question: localized("Est-ce adapté aux urgences ?", "Is it suitable for emergencies?", "Acil durumlar için uygun mu?"),
+      answer: localized(
+        "Non. En cas d’urgence médicale ou situation critique, appelez immédiatement le 112 en Turquie.",
+        "No. In a medical emergency or critical situation, call 112 immediately in Turkey.",
+        "Hayır. Tıbbi acil durumda veya kritik bir durumda Türkiye’de hemen 112’yi arayın.",
+      ),
+    },
+    {
+      question: localized("Comment réserver une consultation ?", "How do I book a consultation?", "Danışmanlık randevusu nasıl alınır?"),
+      answer: localized(
+        "Remplissez le formulaire ou cliquez sur WhatsApp, puis envoyez votre demande avec la langue souhaitée et le créneau préféré.",
+        "Fill in the form or click WhatsApp, then send your request with the preferred language and time slot.",
+        "Formu doldurun veya WhatsApp’a tıklayın, ardından tercih ettiğiniz dil ve saat ile talebinizi gönderin.",
+      ),
+    },
+    {
+      question: localized("Puis-je recevoir une ordonnance ?", "Can I receive a prescription?", "Reçete alabilir miyim?"),
+      answer: localized(
+        "Les possibilités d’ordonnance dépendent du cadre légal, du type de consultation et de l’évaluation du médecin.",
+        "Prescription possibilities depend on the legal framework, consultation type and the doctor’s assessment.",
+        "Reçete imkanı yasal çerçeveye, danışmanlık türüne ve doktorun değerlendirmesine bağlıdır.",
+      ),
+    },
+  ],
+  whatsappQuickMessage: localized(
+    "Bonjour Afro Izmir Hub, je souhaite réserver une consultation médicale en ligne.",
+    "Hello Afro Izmir Hub, I would like to book an online medical consultation.",
+    "Merhaba Afro Izmir Hub, online tıbbi danışmanlık randevusu almak istiyorum.",
+  ),
+  whatsappLabels: {
+    name: localized("Nom", "Name", "Ad"),
+    phone: localized("Téléphone WhatsApp", "WhatsApp phone", "WhatsApp telefonu"),
+    language: localized("Langue souhaitée", "Preferred language", "Tercih edilen dil"),
+    reason: localized("Motif de consultation", "Reason for consultation", "Danışmanlık nedeni"),
+    slot: localized("Créneau souhaité", "Preferred time slot", "Tercih edilen zaman"),
+    message: localized("Message complémentaire", "Additional message", "Ek mesaj"),
+  },
+  providerName: localized(
+    "Consultation médicale Afro Izmir Hub",
+    "Afro Izmir Hub medical consultation",
+    "Afro Izmir Hub tıbbi danışmanlık",
+  ),
+  professionalDescription: localized(
+    "Consultation médicale en ligne avec un médecin agréé, pour une orientation professionnelle selon disponibilité.",
+    "Online medical consultation with a licensed doctor for professional guidance depending on availability.",
+    "Müsaitliğe göre profesyonel yönlendirme için lisanslı doktorla online tıbbi danışmanlık.",
+  ),
+  providerDescription: localized(
+    "Orientation médicale en ligne avec un médecin agréé, selon disponibilité.",
+    "Online medical guidance with a licensed doctor, depending on availability.",
+    "Müsaitliğe göre lisanslı doktorla online tıbbi yönlendirme.",
+  ),
+  highlights: [
+    localized("Médecin agréé", "Licensed doctor", "Lisanslı doktor"),
+    localized("Français / Anglais / Turc", "French / English / Turkish", "Fransızca / İngilizce / Türkçe"),
+    localized("En ligne", "Online", "Online"),
+  ],
+  seoTitle: localized(
+    "Consultation médicale en ligne à Izmir | Médecin agréé | Afro Izmir Hub",
+    "Online medical consultation in Izmir | Licensed doctor | Afro Izmir Hub",
+    "İzmir online tıbbi danışmanlık | Lisanslı doktor | Afro Izmir Hub",
+  ),
+  seoDescription: localized(
+    "Réservez une consultation médicale en ligne avec un médecin agréé depuis Izmir ou ailleurs en Turquie. Service disponible en français, anglais ou turc selon disponibilité.",
+    "Book an online medical consultation with a licensed doctor from Izmir or anywhere in Turkey. Service available in French, English or Turkish depending on availability.",
+    "İzmir’den veya Türkiye’nin herhangi bir yerinden lisanslı bir doktorla online tıbbi danışmanlık randevusu alın. Hizmet müsaitliğe göre Fransızca, İngilizce veya Türkçe sunulur.",
+  ),
+  seoKeywords: [
+    localized("consultation médicale en ligne Izmir", "online medical consultation Izmir", "İzmir online tıbbi danışmanlık"),
+    localized("médecin en ligne Turquie", "online doctor Turkey", "Türkiye online doktor"),
+    localized("médecin francophone Izmir", "French-speaking doctor Izmir", "İzmir Fransızca konuşan doktor"),
+    localized("consultation santé Turquie", "health consultation Turkey", "Türkiye sağlık danışmanlığı"),
+    localized("médecin agréé Turquie", "licensed doctor Turkey", "Türkiye lisanslı doktor"),
+    localized("Afro Izmir Hub médical", "Afro Izmir Hub medical", "Afro Izmir Hub sağlık"),
+  ],
+  jsonLdServiceName: localized(
+    "Consultation médicale en ligne - Afro Izmir Hub",
+    "Online medical consultation - Afro Izmir Hub",
+    "Online tıbbi danışmanlık - Afro Izmir Hub",
+  ),
 } as const;
 
 export type TranslationKey = keyof typeof translations.fr;

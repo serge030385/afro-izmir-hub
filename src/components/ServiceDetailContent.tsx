@@ -111,16 +111,17 @@ export function ServiceDetailContent({ service }: { service: ServiceItem }) {
           </div>
           <div className="grid gap-5 lg:grid-cols-3">
             {service.providers.map((provider) => {
+              const providerName = typeof provider.name === "string" ? provider.name : tx(provider.name);
               const providerMessage = {
-                fr: `Bonjour ${provider.name}, je viens depuis Afro Izmir Hub pour le service ${serviceTitle}.`,
-                en: `Hello ${provider.name}, I come from Afro Izmir Hub for the ${serviceTitle} service.`,
-                tr: `Merhaba ${provider.name}, Afro Izmir Hub’dan ${serviceTitle} hizmeti için geliyorum.`,
+                fr: `Bonjour ${providerName}, je viens depuis Afro Izmir Hub pour le service ${serviceTitle}.`,
+                en: `Hello ${providerName}, I come from Afro Izmir Hub for the ${serviceTitle} service.`,
+                tr: `Merhaba ${providerName}, Afro Izmir Hub’dan ${serviceTitle} hizmeti için geliyorum.`,
               };
 
               return (
-                <article key={provider.name} className="rounded-lg border border-black/10 bg-white p-5 shadow-sm">
+                <article key={providerName} className="rounded-lg border border-black/10 bg-white p-5 shadow-sm">
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-lg font-black tracking-tight text-zinc-950">{provider.name}</h3>
+                    <h3 className="text-lg font-black tracking-tight text-zinc-950">{providerName}</h3>
                     {provider.isPremium ? (
                       <Badge variant="gold">
                         <ShieldCheck className="mr-1 h-3.5 w-3.5" aria-hidden="true" />

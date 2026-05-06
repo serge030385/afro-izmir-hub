@@ -2,10 +2,14 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useTranslation } from "@/components/LanguageProvider";
+import { medicalContent } from "@/lib/i18n";
 import { localSeoLinks } from "@/lib/local-seo";
 import { cn } from "@/lib/utils";
 
 export function SeoInternalLinks({ className, currentSlug }: { className?: string; currentSlug?: string }) {
+  const { tx } = useTranslation();
+
   return (
     <nav className={cn("rounded-lg border border-black/10 bg-white p-5 shadow-sm", className)} aria-label="Liens SEO locaux">
       <p className="text-sm font-black uppercase tracking-[0.16em] text-emerald-800">Pages locales utiles</p>
@@ -14,7 +18,7 @@ export function SeoInternalLinks({ className, currentSlug }: { className?: strin
           href="/consultation-medicale-en-ligne"
           className="group inline-flex items-center justify-between gap-3 rounded-lg bg-emerald-50 px-4 py-3 text-sm font-black text-zinc-950 transition hover:bg-emerald-100"
         >
-          Consultation médicale en ligne
+          {tx(medicalContent.title)}
           <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
         </Link>
         <Link

@@ -1,4 +1,4 @@
-import { localized, type LocalizedText } from "@/lib/i18n";
+import { localized, medicalContent, type LocalizedText } from "@/lib/i18n";
 
 export const SITE_CONFIG = {
   name: "Afro Izmir Hub",
@@ -93,7 +93,7 @@ export type ServiceIconName =
   | "stethoscope";
 
 export type ServiceProvider = {
-  name: string;
+  name: string | LocalizedText;
   city: LocalizedText;
   description: LocalizedText;
   whatsapp: string;
@@ -333,76 +333,26 @@ export const services: ServiceItem[] = [
     slug: "consultation-medicale-en-ligne",
     href: "/consultation-medicale-en-ligne",
     category: "Santé",
-    title: localized(
-      "Consultations médicales en ligne",
-      "Online medical consultations",
-      "Online tıbbi konsültasyonlar",
-    ),
-    shortDescription: localized(
-      "Besoin d’un avis médical ? Réservez une consultation en ligne avec un médecin agréé.",
-      "Need medical guidance? Book an online consultation with a licensed doctor.",
-      "Tıbbi görüşe mi ihtiyacınız var? Lisanslı bir doktorla online konsültasyon ayırın.",
-    ),
-    longDescription: localized(
-      "Afro Izmir Hub propose un service de consultation médicale en ligne avec un médecin agréé pour les personnes vivant à Izmir ou ailleurs en Turquie.",
-      "Afro Izmir Hub offers online medical consultations with a licensed doctor for people living in Izmir or elsewhere in Turkey.",
-      "Afro Izmir Hub, İzmir’de veya Türkiye’nin başka şehirlerinde yaşayan kişiler için lisanslı doktorla online tıbbi konsültasyon hizmeti sunar.",
-    ),
+    title: medicalContent.title,
+    shortDescription: medicalContent.cardDescription,
+    longDescription: medicalContent.serviceText,
     icon: "stethoscope",
     image: "/images/afro-izmir-hero.png",
     backgroundImage: "/images/services/consultation-medicale.svg",
-    benefits: [
-      localized("Parler à un médecin agréé à distance", "Speak remotely with a licensed doctor", "Lisanslı bir doktorla uzaktan görüşün"),
-      localized("Obtenir une orientation médicale professionnelle", "Get professional medical guidance", "Profesyonel tıbbi yönlendirme alın"),
-      localized("Préparer une visite médicale en Turquie", "Prepare for a medical visit in Turkey", "Türkiye’de tıbbi ziyaret için hazırlanın"),
-      localized("Comprendre les prochaines étapes possibles", "Understand possible next steps", "Olası sonraki adımları anlayın"),
-    ],
-    practicalInfo: [
-      localized("Ce service ne remplace pas les urgences médicales", "This service does not replace medical emergencies", "Bu hizmet acil tıbbi durumların yerini tutmaz"),
-      localized("Préparez vos symptômes, questions et documents utiles", "Prepare your symptoms, questions and useful documents", "Belirtilerinizi, sorularınızı ve gerekli belgeleri hazırlayın"),
-      localized("Les langues disponibles dépendent de la disponibilité du médecin", "Available languages depend on the doctor’s availability", "Mevcut diller doktorun uygunluğuna bağlıdır"),
-    ],
+    benefits: [...medicalContent.benefits],
+    practicalInfo: [...medicalContent.practicalInfo],
     providers: [
       {
-        name: "Consultation médicale Afro Izmir Hub",
+        name: medicalContent.providerName,
         city: localized("Izmir / Turquie", "Izmir / Turkey", "İzmir / Türkiye"),
-        description: localized(
-          "Orientation médicale en ligne avec un médecin agréé, selon disponibilité.",
-          "Online medical guidance with a licensed doctor, depending on availability.",
-          "Uygunluğa bağlı olarak lisanslı doktorla online tıbbi yönlendirme.",
-        ),
+        description: medicalContent.providerDescription,
         whatsapp: phone,
         isPremium: true,
       },
     ],
-    faq: [
-      {
-        question: localized("Est-ce adapté aux urgences ?", "Is it suitable for emergencies?", "Acil durumlar için uygun mu?"),
-        answer: localized(
-          "Non. En cas d’urgence, appelez immédiatement le 112 en Turquie.",
-          "No. In an emergency, call 112 immediately in Turkey.",
-          "Hayır. Acil durumda Türkiye’de hemen 112’yi arayın.",
-        ),
-      },
-      {
-        question: localized("Puis-je recevoir une ordonnance ?", "Can I receive a prescription?", "Reçete alabilir miyim?"),
-        answer: localized(
-          "Les possibilités d’ordonnance dépendent du cadre légal, du type de consultation et de l’évaluation du médecin.",
-          "Prescription possibilities depend on the legal framework, consultation type and the doctor’s assessment.",
-          "Reçete imkanı yasal çerçeveye, konsültasyon türüne ve doktor değerlendirmesine bağlıdır.",
-        ),
-      },
-    ],
-    whatsappMessage: localized(
-      "Bonjour Afro Izmir Hub, je souhaite réserver une consultation médicale en ligne.",
-      "Hello Afro Izmir Hub, I would like to book an online medical consultation.",
-      "Merhaba Afro Izmir Hub, online tıbbi konsültasyon ayırmak istiyorum.",
-    ),
-    highlights: [
-      localized("Médecin agréé", "Licensed doctor", "Lisanslı doktor"),
-      localized("Français / Anglais / Turc", "French / English / Turkish", "Fransızca / İngilizce / Türkçe"),
-      localized("En ligne", "Online", "Online"),
-    ],
+    faq: medicalContent.faq.map((item) => ({ question: item.question, answer: item.answer })),
+    whatsappMessage: medicalContent.whatsappQuickMessage,
+    highlights: [...medicalContent.highlights],
     city: localized("Izmir / Turquie", "Izmir / Turkey", "İzmir / Türkiye"),
     featured: true,
   },
@@ -539,7 +489,7 @@ export function getServiceBySlug(slug: string) {
 
 export type Professional = {
   id: string;
-  name: string;
+  name: string | LocalizedText;
   category: Category;
   description: LocalizedText;
   city: LocalizedText;
@@ -550,13 +500,9 @@ export type Professional = {
 export const professionals: Professional[] = [
   {
     id: "consultation-medicale-online",
-    name: "Consultation médicale en ligne",
+    name: medicalContent.title,
     category: "Santé",
-    description: localized(
-      "Consultation médicale en ligne avec un médecin agréé, pour une orientation professionnelle selon disponibilité.",
-      "Online medical consultation with a licensed doctor for professional guidance depending on availability.",
-      "Uygunluğa bağlı olarak profesyonel yönlendirme için lisanslı doktorla online tıbbi konsültasyon.",
-    ),
+    description: medicalContent.professionalDescription,
     city: localized("Izmir / Turquie", "Izmir / Turkey", "İzmir / Türkiye"),
     whatsapp: phone,
     badge: "Premium",
